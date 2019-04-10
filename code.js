@@ -1,10 +1,10 @@
-var numStars = Math.floor(window.innerWidth/50);
+var numStars = Math.floor(window.innerWidth/75);
 var szs = []; x = []; y = [];
 //Initialize stars
 for (var i = 0; i < numStars; i++) {
 	szs.push(Math.random()*14);
 	x.push(Math.random()*(window.innerWidth-20)+10);
-	y.push(Math.random()*(window.innerHeight-20)+10);
+	y.push(Math.random()*(window.innerHeight-window.innerHeight*0.35)+10);
 }
 //Get context
 var c=document.getElementById("canvas");
@@ -40,14 +40,14 @@ draw = function() {
 }
 
 var halfdome = new Image();
-halfdome.src = 'halfdome.png';
+halfdome.src = 'halfdome_min.png';
 
 
-var hd_width = window.innerHeight*1.25*2;
+var hd_width = window.innerHeight*2;
 var hd_height = window.innerHeight*2;
 var xp = -(hd_width-window.innerWidth)/2;
 drawHalfDome = function() {
-	ctx.drawImage(halfdome,xp,50,hd_width,hd_height);
+	ctx.drawImage(halfdome,xp,-200,hd_width,hd_height);
 }
 
 gR = function(min,max) {
@@ -146,3 +146,5 @@ drawDiamond = function(x,y,sz) {
 	ctx.fill();
 	ctx.stroke();
 }
+
+window.onload = draw;
