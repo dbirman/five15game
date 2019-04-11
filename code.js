@@ -36,6 +36,8 @@ draw = function() {
 
 	drawHalfDome();
 
+	drawFall();
+
 	window.requestAnimationFrame(draw);
 }
 
@@ -63,12 +65,12 @@ var minspd = window.innerHeight/20/50;
 var spdup = window.innerHeight/20/50;
 
 var minfallsz = Math.floor(window.innerWidth/70);
-var szp = minfallsz*2;
+var szp = minfallsz;
 
 for (var i = 0; i < numFalls; i++) {
 	fallX.push(window.innerWidth/numFalls*i + Math.random()*100);
-	fallY.push(Math.random()*window.innerHeight);
-	fallMax.push(Math.random()*window.innerHeight/2);
+	fallMax.push(Math.random()*window.innerHeight*0.75);
+	fallY.push(Math.random()*fallMax[i]);
 	fallsz.push(Math.floor(Math.random()*szp+minfallsz));
 	fallSpd.push((Math.random()*spdup+minspd));
 	color = [gR(107,181), gR(168,189), 0.4];
@@ -78,12 +80,12 @@ for (var i = 0; i < numFalls; i++) {
 fallDown = function() {
 	for (var i = 0; i < numFalls; i++) {
 		fallY[i] += fallSpd[i];
-		if (fallY[i] > fallMax[i] && fallY[i] < fallMax[i] + 100) {
-			fallColor[i][2] = fallColor[i][2] * .9;
+		if (fallY[i] > fallMax[i] && fallY[i] < (fallMax[i] + 125)) {
+			fallColor[i][2] = fallColor[i][2] * .96;
 		}
 		else if (fallY[i] > fallMax[i]) {
 			fallX[i] = window.innerWidth/numFalls*i + Math.random()*100;
-			fallsz[i] = Math.floor(Math.random()*50+25);
+			fallsz[i] = Math.floor(Math.random()*szp+minfallsz);
 			fallY[i] = -fallsz[i];
 			fallSpd[i] = Math.random()*spdup+minspd;
 			fallMax[i] = Math.random()*window.innerHeight;
