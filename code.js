@@ -45,8 +45,17 @@ var halfdome = new Image();
 halfdome.src = 'halfdome_min.png';
 
 
-var hd_width = window.innerHeight*2;
-var hd_height = window.innerHeight*2;
+// set the size of halfdome
+let hd_width, hd_height;
+
+if (window.innerWidth<750) {
+	hd_width = window.innerHeight*1.5;
+	hd_height = window.innerHeight*1.5;
+} else {
+	hd_width = window.innerHeight*2;
+	hd_height = window.innerHeight*2;
+}
+
 var xp = -(hd_width-window.innerWidth)/2;
 drawHalfDome = function() {
 	ctx.drawImage(halfdome,xp,-200,hd_width,hd_height);
