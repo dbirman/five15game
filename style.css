@@ -15,8 +15,8 @@ canvas {
 	position:absolute;
 	top:50%;
 	right:0%;
-	transform:translate(-50%,-50%);
-	width:50vw !important;
+	transform:translate(-2.5%,-50%);
+	width:95vw !important;
 	display:block;
 	z-index:1;
 	opacity:0.85;
@@ -25,29 +25,70 @@ canvas {
   background-color: rgba(255, 255, 255, 0.5);;*/
 }
 
-@media screen and (max-width: 767px){   
-    #card-img{      
-        content:url("./cards_tny.png");
-    } 
+.main {
+	text-align:center;
+	font-size:15vw;
+}
 
-    .hover {
-    	transform:translate(-2.5%,-50%);
-    	width:95vw !important;
-    }
+.sub {
+	text-align:center;
+	font-size:3vw;
+}
+
+.table {
+	width:100%;
+}
+
+.card {
+	width: 70%;
+}
+
+#card-img{      
+     content:url("./cards_sml.png");
 }
 
 @media screen and (min-width: 768px) {      
-    #card-img{      
-       content:url("./cards_sml.png");
-     } 
+  #card-img{      
+     content:url("./cards_sml.png");
+	} 
+	.hover {
+		transform:translate(-20%,-50%);
+		width:80vw !important;
+	}
+	.main {
+		font-size:13vw;
+	}
+	.sub {
+		font-size:1.5vw;
+	}
 } 
 @media (min-width: 992px){      
-      #card-img{        
-          content:url("./cards_med.png");  
-      } 
+  #card-img{        
+      content:url("./cards_med.png");  
+  } 
+	.hover {
+		transform:translate(-40%,-50%);
+		width:60vw !important;
+	}
+	.main {
+		font-size:10vw;
+	}
+	.sub {
+		font-size:1.5vw;
+	}
 }
 @media (min-width: 1200px) {    
-     #card-img{         
-         content:url("./cards.png");   
-     } 
+	#card-img{         
+	   content:url("./cards.png");   
+	} 
+	.hover {
+		transform:translate(-50%,-50%);
+		width:50vw !important;
+	}
+	.main {
+		font-size:10vw;
+	}
+	.sub {
+		font-size:1.5vw;
+	}
 }
