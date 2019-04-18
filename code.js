@@ -1,4 +1,4 @@
-var numStars = Math.floor(window.innerWidth/75);
+var numStars = Math.min(5,Math.floor(window.innerWidth/100));
 var szs = []; x = []; y = [];
 //Initialize stars
 for (var i = 0; i < numStars; i++) {
@@ -66,7 +66,7 @@ gR = function(min,max) {
 }
 
 // Setup initial falls
-var numFalls = Math.floor(window.innerWidth/130);
+var numFalls = Math.min(3,Math.floor(window.innerWidth/180));
 var fallX = []; var fallY = []; var fallColor = []; var fallsz = [];
 var fallSpd = []; var fallMax = [];
 
