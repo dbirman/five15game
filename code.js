@@ -20,7 +20,7 @@ ctx.strokeStyle="#ffffff";
 var countDownDate = new Date("May 18, 2020 12:00:00").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+var interval = setInterval(function() {
 
   // Get today's date and time
   var now = new Date().getTime();
