@@ -1,10 +1,16 @@
 * { margin:0; padding:0; font-family: 'Josefin Sans', sans-serif;} /* to remove the top and left whitespace */
 
 html, body { 
-	width:100%;
-	height:100%;
+	/*width:100%;*/
+	/*height:100%;*/
 	background-size:100vw;
-
+	background-position: top;
+	/*background-position-y:25%;*/
+	/*min-height: 100%;*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/*background-position: center;*/
+	background-size: cover;}
 } /* just to be sure these are full screen*/
 
 canvas { 
@@ -21,7 +27,7 @@ canvas {
 	top:50%;
 	right:0%;
 	/*transform:translate(-2.5%,50%);*/
-	width:95vw !important;
+	/*width:90vw !important;*/
 	display:block;
 	z-index:1;
 	opacity:0.9;
@@ -50,19 +56,42 @@ canvas {
 }
 
 
-@media screen and (min-width: 768px) { 
+@media screen and (max-width: 768px) { 
 	body {
 		background-image:url("background_sml.png");
 	}  
 	.hover {
-		transform:translate(-20%,-15%);
+		transform:translate(-15%,-15%);
 		width:80vw !important;
 	}
 	.main {
 		font-size:13vw;
 	}
 	.sub {
-		font-size:1.5vw;
+		font-size:2vw;
+	}
+	.youtube {
+		width:90%;
+		height:240px;
+	}
+} 
+@media screen and (min-width: 768px) { 
+	body {
+		background-image:url("background_sml.png");
+	}  
+	.hover {
+		transform:translate(-15%,-15%);
+		width:80vw !important;
+	}
+	.main {
+		font-size:13vw;
+	}
+	.sub {
+		font-size:2.5vw;
+	}
+	.youtube {
+		width:90%;
+		height:315px;
 	}
 } 
 @media (min-width: 992px){    
@@ -70,14 +99,18 @@ canvas {
 		background-image:url("background_med.png");
 	}  
 	.hover {
-		transform:translate(-40%,-15%);
-		width:60vw !important;
+		transform:translate(-35%,-15%);
+		width:65vw !important;
 	}
 	.main {
 		font-size:10vw;
 	}
 	.sub {
-		font-size:1.5vw;
+		font-size:2vw;
+	}
+	.youtube {
+		width:90%;
+		height:315px;
 	}
 }
 @media (min-width: 1200px) { 
@@ -93,5 +126,9 @@ canvas {
 	}
 	.sub {
 		font-size:1.5vw;
+	}
+	.youtube {
+		width:90%;
+		height:315px;
 	}
 }
