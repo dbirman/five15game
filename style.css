@@ -2,7 +2,7 @@
 
 html, body { 
 	height:100%;
-	
+
   background-repeat: no-repeat;
   background-attachment: fixed;
 
@@ -48,7 +48,7 @@ canvas {
 }
 
 .card {
-	width: 70%;
+	width: 90%;
 }
 
 
@@ -61,10 +61,10 @@ canvas {
 		width:80vw !important;
 	}
 	.main {
-		font-size:13vw;
+		font-size:25vw;
 	}
 	.sub {
-		font-size:2vw;
+		font-size:4vw;
 	}
 	.youtube {
 		width:90%;
@@ -76,14 +76,14 @@ canvas {
 		/*background-image:url("background_sml.png");*/
 	}  
 	.hover {
-		transform:translate(-15%,-15%);
+		transform:translate(-15%,-10%);
 		width:80vw !important;
 	}
 	.main {
-		font-size:13vw;
+		font-size:18vw;
 	}
 	.sub {
-		font-size:2.5vw;
+		font-size:2.2vw;
 	}
 	.youtube {
 		width:90%;
@@ -95,14 +95,14 @@ canvas {
 		/*background-image:url("background_med.png");*/
 	}  
 	.hover {
-		transform:translate(-35%,-15%);
+		transform:translate(-35%,-10%);
 		width:65vw !important;
 	}
 	.main {
-		font-size:10vw;
+		font-size:15vw;
 	}
 	.sub {
-		font-size:2vw;
+		font-size:1.8vw;
 	}
 	.youtube {
 		width:90%;
@@ -114,11 +114,11 @@ canvas {
 		/*background-image:url("background_big.png");*/
 	}  
 	.hover {
-		transform:translate(-50%,-15%);
+		transform:translate(-50%,-10%);
 		width:50vw !important;
 	}
 	.main {
-		font-size:10vw;
+		font-size:15vw;
 	}
 	.sub {
 		font-size:1.5vw;
